@@ -1,7 +1,9 @@
-import React from "react";
+import React from 'react'
 
-export default () => (
+const Minutes = () => (
     <div>
         議事録作成
     </div>
-);
+)
+
+export default Minutes
