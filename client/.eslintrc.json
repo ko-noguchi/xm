@@ -1,40 +1,46 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
+  "env": {
+    "browser": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:flowtype/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
     },
-    "extends": [
-            "eslint:recommended",
-            "plugin:react/recommended",
-            "plugin:flowtype/recommended"
-        ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "experimentalObjectRestSpread": true,
-            "jsx": true
-        },
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "flowtype"
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "flowtype"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      4
     ],
-    "rules": {
-        "indent": [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ]
-    }
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  },
+  "globals": {
+    "describe": false,
+    "it": false,
+    "expect": false
+  }
 }
