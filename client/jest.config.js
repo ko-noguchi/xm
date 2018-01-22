@@ -1,3 +1,6 @@
 module.exports = {
-    setupTestFrameworkScriptFile: './test/setup/index.js'
+    setupFiles: [
+        './test/setup/setup.js'
+    ],
+    setupTestFrameworkScriptFile: './test/setup/setupTestFramework.js'
 }
