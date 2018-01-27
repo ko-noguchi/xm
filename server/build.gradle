@@ -7,6 +7,10 @@ buildscript {
     }
 }
 
+plugins {
+    id "org.flywaydb.flyway" version "5.0.6"
+}
+
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 
@@ -23,6 +27,14 @@ sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    testCompile("org.springframework.boot:spring-boot-starter-test")
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.9.RELEASE")
+    compile("org.postgresql:postgresql:42.2.0")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:1.5.9.RELEASE")
+
+    testCompile("org.springframework.boot:spring-boot-starter-test:1.5.9.RELEASE")
+}
+
+flyway {
+    url = 'jdbc:postgresql:xm'
+    user = 'xm'
 }

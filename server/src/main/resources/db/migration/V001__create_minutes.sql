@@ -1,0 +1,3 @@
+CREATE TABLE minutes (
+  id VARCHAR(100) PRIMARY KEY
+);
