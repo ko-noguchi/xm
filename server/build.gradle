@@ -8,7 +8,7 @@ buildscript {
 }
 
 plugins {
-    id "org.flywaydb.flyway" version "5.0.6"
+    id 'org.flywaydb.flyway' version '5.0.6'
 }
 
 apply plugin: 'java'
@@ -27,9 +27,11 @@ sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 dependencies {
+    compileOnly("org.projectlombok:lombok:1.16.20")
+
     compile("org.springframework.boot:spring-boot-starter-web:1.5.9.RELEASE")
-    compile("org.postgresql:postgresql:42.2.0")
     compile("org.springframework.boot:spring-boot-starter-data-jpa:1.5.9.RELEASE")
+    compile("org.postgresql:postgresql:42.2.0")
 
     testCompile("org.springframework.boot:spring-boot-starter-test:1.5.9.RELEASE")
 }
