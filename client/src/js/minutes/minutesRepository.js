@@ -1,6 +1,6 @@
 // @flow
 import post from '../http/post'
 
-export const createMinutes = () => {
-    post('minutes')
+export const createMinutes = (): Promise<any> => {
+    return post('minutes').then(response => response.json())
 }

@@ -3,14 +3,11 @@ import {createMinutes} from '../../src/js/minutes/minutesRepository'
 
 describe('minutesRepository', () => {
     describe('createMinutes', () => {
-        it('posts to create minutes API', () => {
-            const postSpy = jest.spyOn(post, 'default')
+        it('posts to create minutes API and returns response JSON', () => {
+            jest.spyOn(post, 'default').mockReturnValue(Promise.resolve({json: () => 'response'}))
 
 
-            createMinutes()
-
-
-            expect(postSpy).toHaveBeenCalledWith('minutes')
+            expect(createMinutes()).resolves.toBe('response')
         })
     })
 })

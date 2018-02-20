@@ -1,12 +1,14 @@
 // @flow
 import React from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
-import Minutes from './minutes/Minutes'
+import CreateMinutesPage from './minutes/CreateMinutesPage'
+import MinutesPage from './minutes/MinutesPage'
 
 const App = () => (
     <BrowserRouter>
         <div>
-            <Route path='/minutes' component={Minutes}/>
+            <Route exact path='/minutes' component={CreateMinutesPage}/>
+            <Route path='/minutes/:id' component={MinutesPage}/>
         </div>
     </BrowserRouter>
 )
