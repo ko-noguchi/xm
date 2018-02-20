@@ -15,6 +15,7 @@ public class MinutesController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @CrossOrigin
     public IdentifiableObject createMinutes() {
         String minutesId = service.createMinutes();
         return new IdentifiableObject(minutesId);
@@ -22,6 +23,7 @@ public class MinutesController {
 
     @GetMapping("{id}")
     @ResponseStatus(HttpStatus.OK)
+    @CrossOrigin
     public Minutes getMinutes(@PathVariable String id) {
         com.github.ko_noguchi.xm.domain.Minutes minutes = service.getMinutes(id);
         return new Minutes(minutes.id());
