@@ -8,7 +8,7 @@ describe('post', () => {
         const responsePromise = post('path')
 
 
-        expect(fetchSpy).toHaveBeenCalledWith('http://localhost:8080/path', {method: 'POST'})
+        expect(fetchSpy).toHaveBeenCalledWith('http://localhost:8000/v1/path', {method: 'POST'})
         return responsePromise.then(response => {
             expect(response.body).toEqual('return value')
         })
