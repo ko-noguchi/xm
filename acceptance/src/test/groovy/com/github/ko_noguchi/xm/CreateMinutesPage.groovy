@@ -4,9 +4,8 @@ import geb.Page
 
 class CreateMinutesPage extends Page {
     static url = "minutes"
-    static at = { title == "XM Web Client" }
+    static at = { $("h1").text() == "議事録作成" }
     static content = {
-        header { $("h1") }
         createButton { $("button") }
     }
 }

@@ -4,8 +4,9 @@ import geb.Page
 
 class MinutesPage extends Page {
     static url = "minutes"
-    static at = { title == "XM Web Client" }
-    static content = {
-        header { $("h1") }
+    static at = { isLikeyyyyMMddHHmmss($("h1").text()) }
+
+    static boolean isLikeyyyyMMddHHmmss(String id) {
+        id ==~ /\d{14}/
     }
 }
